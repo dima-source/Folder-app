@@ -1,0 +1,14 @@
+﻿@model IEnumerable<FolderTestApp.Models.Catalog>
+ 
+<h2>@ViewData["CurrentFolderName"]</h2>
+
+
+<table class="table">
+    <tr><th>List</th></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td><a asp-controller="Home" asp-action="Index" asp-route-parentId="@item.Id" >@item.Name</a></td>
+        </tr>
+    }
+</table>

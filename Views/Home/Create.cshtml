@@ -1,0 +1,20 @@
+﻿@model FolderTestApp.Models.Catalog
+
+<h2>Добавление каталога</h2>
+<form asp-action="create" asp-controller="home">
+    <p>
+        <label asp-for="Name">Имя</label><br />
+        <input type="text" asp-for="Name" />
+    </p>
+    <p>
+        <label asp-for="Id">Id</label><br />
+        <input type="number" asp-for="Id" />
+    </p>
+    <p>
+        <label asp-for="ParentId">ParentId</label><br />
+        <input type="number" asp-for="ParentId" />
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>
